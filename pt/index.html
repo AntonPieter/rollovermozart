@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roll Over Mozart — Apoio</title>
+<title>Roll Over Mozart — Compor música com dados</title>
 <style>
     :root {
       --canvas: #07162C;
-      --surface: #1C345B;
+      --surface: #11244180;
       --divider: #2A4570;
       --text: #F4E9E6;
       --muted: #8FA6C0;
@@ -21,11 +21,11 @@
       font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-text-size-adjust: 100%;
     }
-    .wrap { max-width: 40rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .25rem; letter-spacing: -.015em; }
     h2 { font-size: 1.25rem; margin: 2.5rem 0 .5rem; }
     h3 { font-size: 1rem; margin: 1.75rem 0 .25rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    .lead { color: var(--muted); margin: 0 0 2rem; }
+    .lead { color: var(--muted); margin: 0 0 2rem; font-size: 1.125rem; }
     a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
     a:hover { color: var(--accent); }
     ul { padding-left: 1.2rem; }
@@ -38,6 +38,30 @@
     .langs a { margin-right: .75rem; color: var(--muted); text-decoration: none; }
     .langs a:hover { color: var(--accent); text-decoration: underline; }
     .langs a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+    .store { margin: 2rem 0 0; }
+    .store a {
+      display: inline-block; padding: .75rem 1.5rem; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .store a:hover { filter: brightness(1.1); color: #fff; }
+    .soon { color: var(--muted); font-style: italic; }
+    .shots {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      margin: 2.5rem 0 0; padding: 0; list-style: none;
+    }
+    .shots li { margin: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block;
+      border-radius: 14px; border: 1px solid var(--divider);
+    }
+    .shots span { display: block; margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+    .games { margin: 0; padding: 0; list-style: none; }
+    .games li { margin: 1.25rem 0; }
+    .games b { display: block; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 34rem) {
+      .shots { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 1.875rem; }
+    }
     @media (prefers-color-scheme: light) {
       :root { --canvas: #F4E9E6; --surface: #fff; --divider: #d8c9c5; --text: #1a1a1a; --muted: #5b5b5b; }
     }
@@ -45,57 +69,37 @@
 </head>
 <body>
 <div class="wrap">
-<div class="nav"><a href="index.html" aria-current="page">Apoio</a><a href="privacy.html">Privacidade</a></div>
+<div class="nav"><a href="index.html" aria-current="page">Roll Over Mozart</a><a href="support.html">Apoio</a><a href="privacy.html">Privacidade</a></div>
 <div class="langs"><a href="../index.html" hreflang="en">English</a><a href="../nl/index.html" hreflang="nl">Nederlands</a><a href="../de/index.html" hreflang="de">Deutsch</a><a href="../es/index.html" hreflang="es">Español</a><a href="../it/index.html" hreflang="it">Italiano</a><a href="index.html" hreflang="pt" aria-current="page">Português</a></div>
 <h1>Roll Over Mozart</h1>
-<p class="lead">Apoio e contacto</p>
+<p class="lead">Compor música com dados</p>
 
-<p>A Roll Over Mozart toca quatro jogos musicais de dados do s&eacute;culo XVIII:
-lan&ccedil;a os dados e a aplica&ccedil;&atilde;o escreve e toca uma pe&ccedil;a,
-seguindo as tabelas das edi&ccedil;&otilde;es originais de Mozart, Kirnberger,
-Stadler e C.P.E. Bach.</p>
+<p>No século XVIII publicaram-se jogos impressos com que qualquer pessoa podia
+compor sem saber ler uma nota. Cada lançamento aponta um compasso numerado numa
+tabela. Dezasseis lançamentos dão uma peça acabada, no tom certo e com uma
+cadência em condições no final. A Roll Over Mozart toca quatro desses jogos,
+compasso a compasso, segundo as tabelas originais.</p>
+<p class="store soon">Brevemente na App Store.</p>
+<ul class="shots"><li><img src="../img/pt/start.jpg" alt="Lança os dados" loading="lazy" width="440"><span>Lança os dados</span></li><li><img src="../img/pt/score.jpg" alt="A partitura do teu lançamento" loading="lazy" width="440"><span>A partitura do teu lançamento</span></li><li><img src="../img/pt/table.jpg" alt="A tabela original" loading="lazy" width="440"><span>A tabela original</span></li><li><img src="../img/pt/composers.jpg" alt="Quatro compositores" loading="lazy" width="440"><span>Quatro compositores</span></li></ul>
 
-<h2>Como falar comigo</h2>
-<p>D&uacute;vidas, uma falha, uma nota errada ou uma sugest&atilde;o: escreve para
-<a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>. Leio tudo e respondo assim que posso. Ajuda se
-disseres que compositor e que forma estavas a tocar, o teu dispositivo e a
-vers&atilde;o do iOS, e o que esperavas que acontecesse.</p>
+<h2>Quatro jogos impressos</h2>
+<ul class="games"><li><b>Mozart</b>O Musikalisches Würfelspiel publicado em seu nome em Bona, em 1793: um minuete e uma contradança inglesa, 176 compassos numerados cada um, dois dados, dezasseis lançamentos.</li><li><b>Kirnberger</b>Berlim 1757, o mais antigo de todos. Minuete e trio com um único dado, e uma polaca de 154 compassos com dois.</li><li><b>Stadler</b>Viena 1781. Minuete e trio de um beneditino que conheceu de perto Mozart e Haydn, impresso doze anos antes de o jogo de Mozart adotar a sua grelha de algarismos.</li><li><b>C.P.E. Bach</b>Seis compassos de contraponto duplo “sem conhecer as regras”. Qualquer voz superior assenta em qualquer voz inferior, e Bach conta a piada de cara séria.</li></ul>
 
-<h2>Perguntas frequentes</h2>
+<h2>O que fazes com ela</h2>
+<ul><li>Lanças, e ouves logo o resultado.</li><li>Mudas o instrumento e o andamento enquanto a peça toca.</li><li>Segues a partitura do teu lançamento, compasso a compasso, enquanto soa.</li><li>Levas contigo: partitura em PDF, ou um ficheiro MIDI para qualquer programa de música.</li><li>Lês a história de cada edição, com a tabela de dados original e as páginas de compassos numerados.</li></ul>
 
-<h3>Esta m&uacute;sica &eacute; gerada por IA?</h3>
-<p>N&atilde;o. Cada compasso foi escrito pelo compositor e impresso no
-s&eacute;culo XVIII. Os dados decidem apenas a ordem por que os compassos soam, e
-era exatamente para isso que aqueles jogos serviam.</p>
+<h2>Aqui não se inventa nada</h2>
+<p>Cada compasso foi escrito pelo compositor e impresso no século XVIII,
+reproduzido sem mudar uma nota. Os dados só decidem a ordem, tal como estava
+previsto. É a música generativa mais antiga de que há notícia, duzentos e
+cinquenta anos antes do primeiro chatbot.</p>
 
-<h3>O jogo de Mozart &eacute; mesmo dele?</h3>
-<p>Ningu&eacute;m sabe. A edi&ccedil;&atilde;o impressa saiu em Bona em 1793, dois
-anos depois da sua morte, e o cat&aacute;logo K&ouml;chel coloca-a entre as obras
-duvidosas, como K. Anh. C 30.01. Dele com certeza &eacute; um esbo&ccedil;o de
-duas p&aacute;ginas de 1787, K. 516f, em que brincava claramente com a ideia. A
-aplica&ccedil;&atilde;o diz o mesmo na ficha de cada compositor.</p>
-
-<h3>Onde ficam as pe&ccedil;as que crio?</h3>
-<p>Um lan&ccedil;amento dura enquanto o mantiveres no ecr&atilde;. Com Partilhar
-MIDI guardas-o como ficheiro, e a partir da vista da partitura partilhas em PDF.
-Ambos passam pelo menu de partilha normal do iOS, por isso decides tu onde
-ficam.</p>
-
-<h3>Funciona sem liga&ccedil;&atilde;o &agrave; internet?</h3>
-<p>Por completo. S&oacute; precisam de liga&ccedil;&atilde;o as duas
-liga&ccedil;&otilde;es na ficha de cada compositor, que abrem o IMSLP e a
-Wikip&eacute;dia no teu navegador.</p>
-
-<h3>Em que dispositivos funciona?</h3>
-<p>iPhone e iPad com iOS 26.2 ou posterior.</p>
-
-<h2>Fontes</h2>
-<p>As digitaliza&ccedil;&otilde;es das edi&ccedil;&otilde;es originais v&ecirc;m da
-Bayerische Staatsbibliothek, da Badische Landesbibliothek e do IMSLP. Os
-compassos numerados foram retirados dessas edi&ccedil;&otilde;es sem mudar uma
-nota. Os sons dos instrumentos v&ecirc;m do banco GeneralUser GS de
-S. Christian Collins.</p>
-<footer>Roll Over Mozart &middot; Anton Pieter van Grootel &middot; Utrecht</footer>
+<h2>E ainda</h2>
+<p>Onze instrumentos, do piano e do cravo ao violino, à flauta e ao órgão de
+igreja. Andamento de arrastado a veloz. Seis idiomas. Sem conta, sem publicidade,
+sem rastreio, e funciona em modo de voo. iPhone e iPad com iOS 26.2 ou
+posterior.</p>
+<footer>Roll Over Mozart · Anton Pieter van Grootel · Utrecht</footer>
 </div>
 </body>
 </html>

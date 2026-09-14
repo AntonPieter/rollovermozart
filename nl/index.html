@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roll Over Mozart — Ondersteuning</title>
+<title>Roll Over Mozart — Componeer met dobbelstenen</title>
 <style>
     :root {
       --canvas: #07162C;
-      --surface: #1C345B;
+      --surface: #11244180;
       --divider: #2A4570;
       --text: #F4E9E6;
       --muted: #8FA6C0;
@@ -21,11 +21,11 @@
       font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-text-size-adjust: 100%;
     }
-    .wrap { max-width: 40rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .25rem; letter-spacing: -.015em; }
     h2 { font-size: 1.25rem; margin: 2.5rem 0 .5rem; }
     h3 { font-size: 1rem; margin: 1.75rem 0 .25rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    .lead { color: var(--muted); margin: 0 0 2rem; }
+    .lead { color: var(--muted); margin: 0 0 2rem; font-size: 1.125rem; }
     a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
     a:hover { color: var(--accent); }
     ul { padding-left: 1.2rem; }
@@ -38,6 +38,30 @@
     .langs a { margin-right: .75rem; color: var(--muted); text-decoration: none; }
     .langs a:hover { color: var(--accent); text-decoration: underline; }
     .langs a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+    .store { margin: 2rem 0 0; }
+    .store a {
+      display: inline-block; padding: .75rem 1.5rem; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .store a:hover { filter: brightness(1.1); color: #fff; }
+    .soon { color: var(--muted); font-style: italic; }
+    .shots {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      margin: 2.5rem 0 0; padding: 0; list-style: none;
+    }
+    .shots li { margin: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block;
+      border-radius: 14px; border: 1px solid var(--divider);
+    }
+    .shots span { display: block; margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+    .games { margin: 0; padding: 0; list-style: none; }
+    .games li { margin: 1.25rem 0; }
+    .games b { display: block; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 34rem) {
+      .shots { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 1.875rem; }
+    }
     @media (prefers-color-scheme: light) {
       :root { --canvas: #F4E9E6; --surface: #fff; --divider: #d8c9c5; --text: #1a1a1a; --muted: #5b5b5b; }
     }
@@ -45,53 +69,38 @@
 </head>
 <body>
 <div class="wrap">
-<div class="nav"><a href="index.html" aria-current="page">Ondersteuning</a><a href="privacy.html">Privacy</a></div>
+<div class="nav"><a href="index.html" aria-current="page">Roll Over Mozart</a><a href="support.html">Ondersteuning</a><a href="privacy.html">Privacy</a></div>
 <div class="langs"><a href="../index.html" hreflang="en">English</a><a href="index.html" hreflang="nl" aria-current="page">Nederlands</a><a href="../de/index.html" hreflang="de">Deutsch</a><a href="../es/index.html" hreflang="es">Español</a><a href="../it/index.html" hreflang="it">Italiano</a><a href="../pt/index.html" hreflang="pt">Português</a></div>
 <h1>Roll Over Mozart</h1>
-<p class="lead">Ondersteuning en contact</p>
+<p class="lead">Componeer met dobbelstenen</p>
 
-<p>Roll Over Mozart speelt vier achttiende-eeuwse muzikale dobbelspellen: gooi de
-dobbelstenen en de app schrijft en speelt een stuk, volgens de tabellen van de
-originele drukken van Mozart, Kirnberger, Stadler en C.P.E. Bach.</p>
+<p>In de achttiende eeuw verschenen drukken waarmee iedereen muziek kon componeren
+door te dobbelen. Elke worp wees een genummerde maat aan in een tabel. Zestien
+worpen leverden een afgerond stuk op, in de juiste toonsoort, met een nette
+cadens aan het slot, en je hoefde er geen noot voor te kunnen lezen. Roll Over
+Mozart speelt vier van die spellen, maat voor maat volgens de originele
+tabellen.</p>
+<p class="store soon">Binnenkort in de App Store.</p>
+<ul class="shots"><li><img src="../img/nl/start.jpg" alt="Gooi de dobbelstenen" loading="lazy" width="440"><span>Gooi de dobbelstenen</span></li><li><img src="../img/nl/score.jpg" alt="De partituur van je worp" loading="lazy" width="440"><span>De partituur van je worp</span></li><li><img src="../img/nl/table.jpg" alt="De originele tabel" loading="lazy" width="440"><span>De originele tabel</span></li><li><img src="../img/nl/composers.jpg" alt="Vier componisten" loading="lazy" width="440"><span>Vier componisten</span></li></ul>
 
-<h2>Contact</h2>
-<p>Vragen, een bug, een valse noot of een idee: mail naar
-<a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>. Ik lees alles en antwoord zo snel als het lukt. Het
-helpt als je erbij zet welke componist en welke vorm je speelde, welk apparaat
-je hebt met welke iOS-versie, en wat je in plaats daarvan verwachtte.</p>
+<h2>Vier gedrukte spellen</h2>
+<ul class="games"><li><b>Mozart</b>Het Musikalisches Würfelspiel dat in 1793 onder zijn naam in Bonn verscheen: een menuet en een Engelse contradans, elk 176 genummerde maten, twee dobbelstenen, zestien worpen.</li><li><b>Kirnberger</b>Berlijn 1757, het oudste van allemaal. Een menuet en trio met één dobbelsteen, en een polonaise van 154 maten met twee.</li><li><b>Stadler</b>Wenen 1781. Een menuet en trio van een benedictijn die zowel Mozart als Haydn goed kende, gedrukt twaalf jaar voordat het Mozart-spel zijn cijferraster overnam.</li><li><b>C.P.E. Bach</b>Zes maten dubbel contrapunt “zonder de regels te kennen”. Elke bovenstem past op elke onderstem, en Bach vertelt zijn grap met een uitgestreken gezicht.</li></ul>
 
-<h2>Veelgestelde vragen</h2>
+<h2>Wat je ermee doet</h2>
+<ul><li>Gooien, en je hoort het meteen.</li><li>Instrument en tempo veranderen terwijl het stuk speelt.</li><li>De partituur van je eigen worp meelezen, maat voor maat, terwijl hij klinkt.</li><li>Hem meenemen: bladmuziek als pdf, of een MIDI-bestand voor elk muziekprogramma.</li><li>Het verhaal van elke druk lezen, met de originele dobbelsteentabel en de pagina's met genummerde maten.</li></ul>
 
-<h3>Is deze muziek door AI gemaakt?</h3>
-<p>Nee. Elke maat is geschreven door de componist en gedrukt in de achttiende
-eeuw. De dobbelstenen bepalen alleen de volgorde waarin de maten klinken, en
-daar waren die spellen ook precies voor bedoeld.</p>
+<h2>Hier wordt niets bedacht</h2>
+<p>Elke maat is geschreven door de componist en gedrukt in de achttiende eeuw,
+overgenomen zonder dat er een noot is veranderd. De dobbelstenen bepalen alleen
+de volgorde, precies zoals het bedoeld was. Dit is de oudste generatieve muziek
+die we kennen, tweehonderdvijftig jaar voor de eerste chatbot.</p>
 
-<h3>Is het spel van Mozart echt van Mozart?</h3>
-<p>Dat weet niemand. De gedrukte versie verscheen in 1793 in Bonn, twee jaar na
-zijn dood, en het K&ouml;chel-verzeichnis zet het bij de twijfelachtige werken
-als K. Anh. C 30.01. Wat wel zeker van hem is: een schets van twee pagina's uit
-1787, K. 516f, waarin hij duidelijk met het idee speelde. In de app staat dat bij
-elke componist ook zo in de infosheet.</p>
-
-<h3>Waar blijven de stukken die ik maak?</h3>
-<p>Een worp bestaat zolang je hem op het scherm houdt. Met Deel MIDI bewaar je
-hem als bestand, en vanuit de partituur deel je hem als pdf. Allebei gaan via het
-gewone deelvenster van iOS, dus jij bepaalt waar ze terechtkomen.</p>
-
-<h3>Werkt de app zonder internet?</h3>
-<p>Volledig. Het enige dat een verbinding nodig heeft zijn de twee links in de
-infosheet van elke componist, die IMSLP en Wikipedia in je browser openen.</p>
-
-<h3>Op welke apparaten draait het?</h3>
-<p>iPhone en iPad met iOS 26.2 of nieuwer.</p>
-
-<h2>Bronnen</h2>
-<p>De scans van de originele drukken komen van de Bayerische Staatsbibliothek, de
-Badische Landesbibliothek en IMSLP. De genummerde maten zijn daaruit overgenomen
-zonder dat er een noot is veranderd. De instrumentklanken komen uit de
-GeneralUser GS-klankbank van S. Christian Collins.</p>
-<footer>Roll Over Mozart &middot; Anton Pieter van Grootel &middot; Utrecht</footer>
+<h2>Verder nog</h2>
+<p>Elf instrumenten, van piano en klavecimbel tot viool, fluit en kerkorgel. Tempo
+van slepend tot rennend. Zes talen. Geen account, geen reclame, geen tracking,
+en het werkt met de vliegtuigstand aan. iPhone en iPad met iOS 26.2 of
+nieuwer.</p>
+<footer>Roll Over Mozart · Anton Pieter van Grootel · Utrecht</footer>
 </div>
 </body>
 </html>

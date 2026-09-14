@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Roll Over Mozart — Support</title>
+<title>Roll Over Mozart — Compose music with dice</title>
 <style>
     :root {
       --canvas: #07162C;
-      --surface: #1C345B;
+      --surface: #11244180;
       --divider: #2A4570;
       --text: #F4E9E6;
       --muted: #8FA6C0;
@@ -21,11 +21,11 @@
       font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-text-size-adjust: 100%;
     }
-    .wrap { max-width: 40rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .25rem; letter-spacing: -.015em; }
     h2 { font-size: 1.25rem; margin: 2.5rem 0 .5rem; }
     h3 { font-size: 1rem; margin: 1.75rem 0 .25rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-    .lead { color: var(--muted); margin: 0 0 2rem; }
+    .lead { color: var(--muted); margin: 0 0 2rem; font-size: 1.125rem; }
     a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
     a:hover { color: var(--accent); }
     ul { padding-left: 1.2rem; }
@@ -38,6 +38,30 @@
     .langs a { margin-right: .75rem; color: var(--muted); text-decoration: none; }
     .langs a:hover { color: var(--accent); text-decoration: underline; }
     .langs a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+    .store { margin: 2rem 0 0; }
+    .store a {
+      display: inline-block; padding: .75rem 1.5rem; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .store a:hover { filter: brightness(1.1); color: #fff; }
+    .soon { color: var(--muted); font-style: italic; }
+    .shots {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      margin: 2.5rem 0 0; padding: 0; list-style: none;
+    }
+    .shots li { margin: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block;
+      border-radius: 14px; border: 1px solid var(--divider);
+    }
+    .shots span { display: block; margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+    .games { margin: 0; padding: 0; list-style: none; }
+    .games li { margin: 1.25rem 0; }
+    .games b { display: block; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 34rem) {
+      .shots { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 1.875rem; }
+    }
     @media (prefers-color-scheme: light) {
       :root { --canvas: #F4E9E6; --surface: #fff; --divider: #d8c9c5; --text: #1a1a1a; --muted: #5b5b5b; }
     }
@@ -45,53 +69,37 @@
 </head>
 <body>
 <div class="wrap">
-<div class="nav"><a href="index.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></div>
+<div class="nav"><a href="index.html" aria-current="page">Roll Over Mozart</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></div>
 <div class="langs"><a href="index.html" hreflang="en" aria-current="page">English</a><a href="nl/index.html" hreflang="nl">Nederlands</a><a href="de/index.html" hreflang="de">Deutsch</a><a href="es/index.html" hreflang="es">Español</a><a href="it/index.html" hreflang="it">Italiano</a><a href="pt/index.html" hreflang="pt">Português</a></div>
 <h1>Roll Over Mozart</h1>
-<p class="lead">Support and contact</p>
+<p class="lead">Compose music with dice</p>
 
-<p>Roll Over Mozart plays four eighteenth-century musical dice games: throw the
-dice and the app writes and plays a piece, following the tables of the original
-prints by Mozart, Kirnberger, Stadler and C.P.E. Bach.</p>
+<p>In the eighteenth century, printed games let anyone compose music by throwing
+dice. Each throw pointed to a numbered bar in a table. Sixteen throws made a
+finished piece, in the right key, with a proper cadence at the end, and you
+needed to know nothing about notation to get there. Roll Over Mozart plays four
+of those games, following the original tables bar for bar.</p>
+<p class="store soon">Coming soon to the App Store.</p>
+<ul class="shots"><li><img src="img/en/start.jpg" alt="Roll the dice" loading="lazy" width="440"><span>Roll the dice</span></li><li><img src="img/en/score.jpg" alt="The score of your throw" loading="lazy" width="440"><span>The score of your throw</span></li><li><img src="img/en/table.jpg" alt="The original table" loading="lazy" width="440"><span>The original table</span></li><li><img src="img/en/composers.jpg" alt="Four composers" loading="lazy" width="440"><span>Four composers</span></li></ul>
 
-<h2>Getting in touch</h2>
-<p>Questions, a bug, a wrong note, or a suggestion: write to
-<a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>. I read everything and answer as soon as I can. It
-helps if you mention which composer and form you were playing, your device and
-its iOS version, and what you expected to happen instead.</p>
+<h2>Four printed games</h2>
+<ul class="games"><li><b>Mozart</b>The Musikalisches Würfelspiel published under his name in Bonn in 1793: a minuet and an English contredanse, 176 numbered bars each, two dice, sixteen throws.</li><li><b>Kirnberger</b>Berlin 1757, the oldest of them all. A minuet and trio thrown with a single die, and a polonaise of 154 bars with two.</li><li><b>Stadler</b>Vienna 1781. A minuet and trio by a Benedictine who knew both Mozart and Haydn, printed twelve years before the Mozart game borrowed its grid of numbers.</li><li><b>C.P.E. Bach</b>Six bars of double counterpoint “without knowing the rules”. Any upper voice fits any lower one, and Bach tells the joke with a straight face.</li></ul>
 
-<h2>Frequently asked</h2>
+<h2>What you can do</h2>
+<ul><li>Roll, and hear the result straight away.</li><li>Change the instrument and the tempo while the piece is playing.</li><li>Read the score of your own throw, bar by bar, as it sounds.</li><li>Take it with you: sheet music as a PDF, or a MIDI file for any music program.</li><li>Read the story of each print, with the original dice table and the pages of numbered bars.</li></ul>
 
-<h3>Is this music generated by AI?</h3>
-<p>No. Every bar was written by the composer and printed in the eighteenth
-century. The dice decide only the order in which the bars are played, which is
-exactly what the original games were for.</p>
+<h2>Nothing here is generated</h2>
+<p>Every bar was written by the composer and printed in the eighteenth century,
+copied without a note changed. The dice decide only the order, exactly as they
+were meant to. This is the oldest generative music we know of, two hundred and
+fifty years before the first chatbot.</p>
 
-<h3>Did Mozart really write his game?</h3>
-<p>Nobody knows. The printed game appeared in Bonn in 1793, two years after his
-death, and the K&ouml;chel catalogue lists it among the doubtful works as
-K. Anh. C 30.01. What is certainly his is a two-page sketch from 1787, K. 516f,
-in which he was clearly playing with the idea. The app says as much in the info
-sheet for each composer.</p>
-
-<h3>Where do the pieces I make go?</h3>
-<p>A roll lives for as long as you keep it on screen. Use Share MIDI to keep it
-as a file, or share the score as a PDF from the sheet music view. Both go
-through the standard iOS share sheet, so you decide where they end up.</p>
-
-<h3>Does it work without an internet connection?</h3>
-<p>Entirely. The only things that need a connection are the two links in each
-composer's info sheet, which open IMSLP and Wikipedia in your browser.</p>
-
-<h3>Which devices does it run on?</h3>
-<p>iPhone and iPad running iOS 26.2 or later.</p>
-
-<h2>Sources</h2>
-<p>The scans of the original prints come from the Bayerische Staatsbibliothek,
-the Badische Landesbibliothek and IMSLP. The numbered bars are taken from those
-prints without a note changed. The instrument sounds come from the GeneralUser GS
-sound bank by S. Christian Collins.</p>
-<footer>Roll Over Mozart &middot; Anton Pieter van Grootel &middot; Utrecht</footer>
+<h2>Also true</h2>
+<p>Eleven instruments, from piano and harpsichord to violin, flute and church
+organ. Tempo from a crawl to a sprint. Six languages. No account, no
+advertising, no tracking, and it works with the aeroplane mode on. iPhone and
+iPad running iOS 26.2 or later.</p>
+<footer>Roll Over Mozart · Anton Pieter van Grootel · Utrecht</footer>
 </div>
 </body>
 </html>
