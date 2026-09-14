@@ -31,9 +31,13 @@
     ul { padding-left: 1.2rem; }
     li { margin: .35rem 0; }
     footer { color: var(--muted); font-size: .875rem; margin-top: 3rem; border-top: 1px solid var(--divider); padding-top: 1.5rem; }
-    .nav { margin-bottom: 2.5rem; font-size: .9375rem; }
+    .nav { margin-bottom: .75rem; font-size: .9375rem; }
     .nav a { margin-right: 1rem; color: var(--muted); }
     .nav a[aria-current] { color: var(--text); }
+    .langs { margin-bottom: 2.5rem; font-size: .875rem; color: var(--muted); }
+    .langs a { margin-right: .75rem; color: var(--muted); text-decoration: none; }
+    .langs a:hover { color: var(--accent); text-decoration: underline; }
+    .langs a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
     @media (prefers-color-scheme: light) {
       :root { --canvas: #F4E9E6; --surface: #fff; --divider: #d8c9c5; --text: #1a1a1a; --muted: #5b5b5b; }
     }
@@ -42,6 +46,7 @@
 <body>
 <div class="wrap">
 <div class="nav"><a href="index.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></div>
+<div class="langs"><a href="index.html" hreflang="en" aria-current="page">English</a><a href="nl/index.html" hreflang="nl">Nederlands</a><a href="de/index.html" hreflang="de">Deutsch</a><a href="es/index.html" hreflang="es">Español</a><a href="it/index.html" hreflang="it">Italiano</a><a href="pt/index.html" hreflang="pt">Português</a></div>
 <h1>Roll Over Mozart</h1>
 <p class="lead">Support and contact</p>
 
@@ -51,9 +56,9 @@ prints by Mozart, Kirnberger, Stadler and C.P.E. Bach.</p>
 
 <h2>Getting in touch</h2>
 <p>Questions, a bug, a wrong note, or a suggestion: write to
-<a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>. I read everything and answer as soon as
-I can. It helps if you mention which composer and form you were playing, your
-device and its iOS version, and what you expected to happen instead.</p>
+<a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>. I read everything and answer as soon as I can. It
+helps if you mention which composer and form you were playing, your device and
+its iOS version, and what you expected to happen instead.</p>
 
 <h2>Frequently asked</h2>
 
@@ -86,7 +91,6 @@ composer's info sheet, which open IMSLP and Wikipedia in your browser.</p>
 the Badische Landesbibliothek and IMSLP. The numbered bars are taken from those
 prints without a note changed. The instrument sounds come from the GeneralUser GS
 sound bank by S. Christian Collins.</p>
-
 <footer>Roll Over Mozart &middot; Anton Pieter van Grootel &middot; Utrecht</footer>
 </div>
 </body>
