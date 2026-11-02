@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6793966468">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roll Over Mozart">
+<meta property="og:title" content="Roll Over Mozart: Composez avec des dés">
+<meta property="og:description" content="Composez avec des dés">
+<meta property="og:url" content="https://antonpieter.github.io/rollovermozart/fr/">
+<meta property="og:image" content="https://antonpieter.github.io/rollovermozart/img/fr/start.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<title>Roll Over Mozart: Composez avec des dés</title>
+<style>
+    :root {
+      --canvas: #07162C;
+      --surface: #11244180;
+      --divider: #2A4570;
+      --text: #F4E9E6;
+      --muted: #8FA6C0;
+      --accent: #B02A3C;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 2.25rem; line-height: 1.15; margin: 0 0 .25rem; letter-spacing: -.015em; }
+    h2 { font-size: 1.25rem; margin: 2.5rem 0 .5rem; }
+    h3 { font-size: 1rem; margin: 1.75rem 0 .25rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+    .lead { color: var(--muted); margin: 0 0 2rem; font-size: 1.125rem; }
+    a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
+    a:hover { color: var(--accent); }
+    ul { padding-left: 1.2rem; }
+    li { margin: .35rem 0; }
+    footer { color: var(--muted); font-size: .875rem; margin-top: 3rem; border-top: 1px solid var(--divider); padding-top: 1.5rem; }
+    .nav { margin-bottom: .75rem; font-size: .9375rem; }
+    .nav a { margin-right: 1rem; color: var(--muted); }
+    .nav a[aria-current] { color: var(--text); }
+    .langs { margin-bottom: 2.5rem; font-size: .875rem; color: var(--muted); }
+    .langs a { margin-right: .75rem; color: var(--muted); text-decoration: none; }
+    .langs a:hover { color: var(--accent); text-decoration: underline; }
+    .langs a[aria-current] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); }
+    .store { margin: 2rem 0 0; }
+    .store a {
+      display: inline-block; padding: .75rem 1.5rem; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .store a:hover { filter: brightness(1.1); color: #fff; }
+    .soon { color: var(--muted); font-style: italic; }
+    .shots {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      margin: 2.5rem 0 0; padding: 0; list-style: none;
+    }
+    .shots li { margin: 0; }
+    .shots img {
+      width: 100%; height: auto; display: block;
+      border-radius: 14px; border: 1px solid var(--divider);
+    }
+    .shots span { display: block; margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+    .games { margin: 0; padding: 0; list-style: none; }
+    .games li { margin: 1.25rem 0; }
+    .games b { display: block; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    @media (max-width: 34rem) {
+      .shots { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 1.875rem; }
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --canvas: #F4E9E6; --surface: #fff; --divider: #d8c9c5; --text: #1a1a1a; --muted: #5b5b5b; }
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="index.html" aria-current="page">Roll Over Mozart</a><a href="support.html">Assistance</a><a href="privacy.html">Confidentialité</a></div>
+<div class="langs"><a href="../index.html" hreflang="en">English</a><a href="../nl/index.html" hreflang="nl">Nederlands</a><a href="../de/index.html" hreflang="de">Deutsch</a><a href="../es/index.html" hreflang="es">Español</a><a href="../it/index.html" hreflang="it">Italiano</a><a href="../pt/index.html" hreflang="pt">Português</a><a href="index.html" hreflang="fr" aria-current="page">Français</a></div>
+<h1>Roll Over Mozart</h1>
+<p class="lead">Composez avec des dés</p>
+
+<p>Au dix-huitième siècle paraissaient des imprimés avec lesquels chacun pouvait
+composer de la musique en jouant aux dés. Chaque lancer désignait une mesure
+numérotée dans une table. Une série de lancers donnait une pièce complète, dans les règles
+de l'art, avec une cadence soignée à la fin. Pas besoin de savoir lire une
+note. Roll Over Mozart joue quatre de ces jeux, mesure par mesure,
+d'après les tables originales.</p>
+<p class="store"><a href="https://apps.apple.com/app/id6793966468">Télécharger dans l’App Store</a></p>
+<ul class="shots"><li><img src="../img/fr/start.jpg" alt="Lancez les dés" loading="lazy" width="440"><span>Lancez les dés</span></li><li><img src="../img/fr/score.jpg" alt="La partition de votre lancer" loading="lazy" width="440"><span>La partition de votre lancer</span></li><li><img src="../img/fr/table.jpg" alt="La table originale" loading="lazy" width="440"><span>La table originale</span></li><li><img src="../img/fr/unlock.jpg" alt="Trois autres avec un achat" loading="lazy" width="440"><span>Trois autres avec un achat</span></li></ul>
+
+<h2>Quatre jeux imprimés</h2>
+<ul class="games"><li><b>Mozart</b>Le Musikalisches Würfelspiel paru sous son nom à Bonn en 1793 : un menuet et une contredanse anglaise, chacun de 176 mesures numérotées, deux dés, seize lancers.</li><li><b>Kirnberger</b>Berlin 1757, le plus ancien de tous. Un menuet et trio avec un seul dé, et une polonaise de 154 mesures avec deux.</li><li><b>Stadler</b>Vienne 1781. Un menuet et trio d'un bénédictin qui connaissait bien Mozart comme Haydn, imprimé douze ans avant que le jeu de Mozart ne reprenne sa grille de chiffres.</li><li><b>C.P.E. Bach</b>Six mesures de contrepoint double « sans en connaître les règles ». Chaque voix supérieure s'accorde à chaque voix inférieure, et Bach raconte sa plaisanterie sans sourciller.</li></ul>
+
+<h2>Ce que vous en faites</h2>
+<ul><li>Lancez, et vous l'entendez aussitôt.</li><li>Changez d'instrument et de tempo pendant que la pièce joue.</li><li>Suivez la partition de votre propre lancer, mesure par mesure, pendant qu'elle sonne.</li><li>Emportez-la : la partition en pdf, ou un fichier MIDI pour n'importe quel logiciel de musique.</li><li>Lisez l'histoire de chaque imprimé, avec la table de dés originale et les pages de mesures numérotées.</li></ul>
+
+<h2>Rien n'est inventé ici</h2>
+<p>Chaque mesure est écrite par le compositeur et imprimée au dix-huitième siècle,
+reprise sans qu'une note ait été changée. Les dés ne déterminent que l'ordre,
+exactement comme prévu. C'est la plus ancienne musique générative que nous
+connaissions, deux cent cinquante ans avant le premier agent conversationnel.</p>
+
+<h2>Et encore</h2>
+<p>Onze instruments, du piano et du clavecin au violon, à la flûte et à l'orgue
+d'église. Tempo du plus lent au plus vif. Sept langues. Pas de compte,
+pas de publicité, pas de pistage, et l'application fonctionne en mode avion.
+iPhone et iPad avec iOS 26.2 ou plus récent.</p>
+<footer>Roll Over Mozart · Anton Pieter van Grootel · Utrecht</footer>
+</div>
+</body>
+</html>
