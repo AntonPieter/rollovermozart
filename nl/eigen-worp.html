@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-itunes-app" content="app-id=6793966468, affiliate-data=pt=260274&amp;ct=eigen-worp-nl&amp;mt=8">
+<meta name="description" content="Gooi samen een menuet. Zestien worpen met twee dobbelstenen, een tabel uit 1793, en een stuk dat nog niemand hoorde. Voor een zaal, een klas of thuis.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roll Over Mozart">
+<meta property="og:title" content="Gooi samen een menuet">
+<meta property="og:description" content="Zestien worpen met twee dobbelstenen, een tabel uit 1793, en een stuk dat nog niemand hoorde. Voor een zaal, een klas of thuis.">
+<meta property="og:url" content="https://antonpieter.github.io/rollovermozart/nl/eigen-worp.html">
+<meta property="og:image" content="https://antonpieter.github.io/rollovermozart/img/eigen-worp/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<title>Gooi samen een menuet · Roll Over Mozart</title>
+<style>
+    :root {
+      --canvas: #07162C;
+      --surface: #112441;
+      --raised: #1A3157;
+      --divider: #2A4570;
+      --text: #F4E9E6;
+      --muted: #8FA6C0;
+      --accent: #B02A3C;
+      --paper: #F7F1E8;
+      --ink: #1B1B1B;
+      --serif: ui-serif, "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
+      --round: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--text);
+      font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    .wrap { max-width: 62rem; margin: 0 auto; padding: 2rem 1.5rem 5rem; }
+    .text { max-width: 40rem; }
+    a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
+    a:hover { color: var(--accent); }
+    .nav { margin-bottom: 1.5rem; font-size: .9375rem; }
+    .nav a { margin-right: 1rem; color: var(--muted); }
+    .nav a[aria-current] { color: var(--text); }
+
+    .hero img {
+      display: block; width: 100%; height: auto;
+      border-radius: 18px; border: 1px solid var(--divider);
+    }
+    .eyebrow {
+      margin: 2.5rem 0 .5rem; font-size: .8125rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    h1 {
+      font-family: var(--serif); font-weight: 600;
+      font-size: clamp(2.25rem, 6vw, 3.75rem); line-height: 1.05;
+      letter-spacing: -.02em; margin: 0 0 1rem; text-wrap: balance;
+    }
+    .lead { font-size: 1.25rem; line-height: 1.5; color: var(--muted); margin: 0; max-width: 36rem; }
+    h2 {
+      font-family: var(--serif); font-weight: 600;
+      font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.2;
+      margin: 4.5rem 0 1rem; text-wrap: balance;
+    }
+    h3 { font-size: 1.0625rem; margin: 0 0 .25rem; }
+    p { margin: 0 0 1rem; }
+
+    /* Steps beside the film */
+    .how { display: grid; grid-template-columns: minmax(0, 1fr) 17rem; gap: 3rem; align-items: start; }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+    .steps li {
+      counter-increment: step; position: relative;
+      padding: 1.1rem 0 1.1rem 3.75rem; border-top: 1px solid var(--divider);
+    }
+    .steps li:last-child { border-bottom: 1px solid var(--divider); }
+    .steps li::before {
+      content: counter(step); position: absolute; left: 0; top: 1.05rem;
+      width: 2.5rem; height: 2.5rem; border-radius: 8px;
+      background: var(--raised); border: 1px solid var(--divider);
+      font: 700 1.125rem/2.4rem var(--round); text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .steps p { margin: 0; color: var(--muted); }
+    .needs { margin: 1.5rem 0 0; color: var(--muted); font-size: .9375rem; }
+    .film { margin: 0; }
+    .film video {
+      display: block; width: 100%; height: auto; aspect-ratio: 886 / 1920;
+      border-radius: 2rem; border: 1px solid var(--divider); background: #000;
+    }
+    figcaption { margin-top: .6rem; font-size: .8125rem; color: var(--muted); }
+
+    a:focus-visible, video:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+
+    /* Three settings */
+    .ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+    .ways li { background: var(--surface); border: 1px solid var(--divider); border-radius: 14px; padding: 1.25rem; }
+    .ways b { display: block; font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .35rem; }
+    .ways p { margin: 0; }
+
+    /* The print */
+    .plates { display: grid; grid-template-columns: 5fr 6fr; gap: 1.5rem; margin: 1.5rem 0 0; align-items: start; }
+    .plates figure { margin: 0; }
+    .plates img {
+      display: block; width: 100%; height: auto; background: var(--paper);
+      border-radius: 6px; border: 1px solid var(--divider); padding: .75rem;
+    }
+    .facts { margin: 2rem 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+    .facts li { border-top: 2px solid var(--accent); padding-top: .75rem; color: var(--muted); font-size: .9375rem; }
+    .facts strong { display: block; color: var(--text); font: 700 1.625rem/1.2 var(--round); font-variant-numeric: tabular-nums; margin-bottom: .25rem; }
+
+    .store { margin: 1.5rem 0 0; }
+    .store a {
+      display: inline-block; padding: .8rem 1.5rem; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+    }
+    .store a:hover { filter: brightness(1.1); color: #fff; }
+    .small { color: var(--muted); font-size: .9375rem; }
+    footer { color: var(--muted); font-size: .875rem; margin-top: 4rem; border-top: 1px solid var(--divider); padding-top: 1.5rem; }
+
+    @media (max-width: 48rem) {
+      .how { grid-template-columns: 1fr; gap: 2rem; }
+      .film { max-width: 17rem; margin: 0 auto; }
+      .ways { grid-template-columns: 1fr; }
+      .plates { grid-template-columns: 1fr; }
+      .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --canvas: #F4E9E6; --surface: #fff; --raised: #EADCD7; --divider: #d8c9c5;
+        --text: #1a1a1a; --muted: #5b5b5b; --paper: #fff;
+      }
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="nav"><a href="index.html">Roll Over Mozart</a><a href="eigen-worp.html" aria-current="page">Samen gooien</a><a href="support.html">Ondersteuning</a><a href="privacy.html">Privacy</a></div>
+
+<header class="hero">
+  <img src="../img/eigen-worp/header.jpg" width="1920" height="823" alt="Een dobbeltabel met maatnummers, twee dobbelstenen en een notenbalk met de gekozen maten.">
+  <p class="eyebrow">Voor een zaal, een klas of thuis</p>
+  <h1>Gooi samen een menuet</h1>
+  <p class="lead">Zestien worpen met twee dobbelstenen. Een tabel uit 1793 wijst bij elke worp een maat aan. Wat er klinkt, heeft nog niemand gehoord.</p>
+</header>
+
+<h2>Zo gaat het</h2>
+<div class="how">
+  <div>
+    <ol class="steps">
+      <li><h3>Gooi zestien keer</h3><p>Zestien mensen gooien elk één keer, of één paar dobbelstenen gaat de kring rond. Noteer de zestien sommen op volgorde.</p></li>
+      <li><h3>Tik de sommen aan in de tabel</h3><p>Open in de app Mozart, kies "Zo werkt het" en dan "Voer je eigen worp in". Je tikt per worp de cel van de gegooide som aan. Een fout herstel je met een tik op de goede cel.</p></li>
+      <li><h3>Bekijk de partituur</h3><p>Na de zestiende som staat de bladmuziek klaar, op de iPhone of groot op een iPad op de lessenaar.</p></li>
+      <li><h3>Speel het stuk</h3><p>Een pianist speelt het van blad, of de app speelt het zelf, op piano, klavecimbel of een van de andere instrumenten.</p></li>
+    </ol>
+    <p class="needs">Je hebt nodig: twee dobbelstenen, een iPhone of iPad met de app, en drie tot vier minuten. Het menuet onder Mozarts naam is gratis in de app.</p>
+  </div>
+  <figure class="film">
+    <!-- Placeholder: replace with the own-roll recording when it exists. -->
+    <video controls playsinline preload="none" poster="../img/eigen-worp/poster.jpg" aria-label="De app in dertig seconden">
+      <source src="../media/eigen-worp-nl.mp4" type="video/mp4">
+    </video>
+    <figcaption>De app in dertig seconden.</figcaption>
+  </figure>
+</div>
+
+<h2>Drie manieren om het te doen</h2>
+<ul class="ways">
+  <li><b>In een zaal</b><p>Zestien mensen krijgen een bakje met twee dobbelstenen en gooien tegelijk. De presentator loopt de rij langs en noemt de sommen. De pianist speelt het stuk een halve minuut later.</p></li>
+  <li><b>In een klas</b><p>Elk groepje gooit een eigen stuk en vergelijkt het met dat van de buren. Waarom klinkt elke worp goed? Wat blijft gelijk, en wat verandert?</p></li>
+  <li><b>Thuis</b><p>Gooi aan tafel, tik de worp in en bewaar het stuk als bladmuziek, audio of MIDI. Elke gast gaat met een eigen menuet naar huis.</p></li>
+</ul>
+
+<h2>De druk uit 1793</h2>
+<p class="text">Het Musikalisches Würfelspiel verscheen in 1793 in Bonn, twee jaar na Mozarts dood, onder zijn naam. Of hij het zelf schreef, is niet bewezen. De druk bestaat uit een tabel met getallen en pagina's met genummerde maten. De app gebruikt die tabel en die maten, zonder dat er een noot is veranderd.</p>
+<div class="plates">
+  <figure>
+    <img src="../img/eigen-worp/tabel-menuet.jpg" width="1200" height="2011" loading="lazy" alt="De Zahlentafel uit de druk: twee tabellen van elf rijen en acht kolommen met maatnummers.">
+    <figcaption>De tabel. De rijen zijn de sommen 2 tot en met 12, de kolommen A tot en met H de worpen. Het eerste deel staat boven, het tweede onder.</figcaption>
+  </figure>
+  <figure>
+    <img src="../img/eigen-worp/maten-menuet.jpg" width="1400" height="1784" loading="lazy" alt="Een pagina uit de druk met genummerde maten in notenschrift.">
+    <figcaption>De eerste pagina met maten. Elk nummer uit de tabel verwijst naar één maat.</figcaption>
+  </figure>
+</div>
+<ul class="facts">
+  <li><strong>176</strong>genummerde maten in de druk</li>
+  <li><strong>16</strong>worpen voor één menuet</li>
+  <li><strong>11</strong>mogelijke maten per worp</li>
+  <li><strong>759 biljoen</strong>verschillende stukken. De elf maten voor de achtste worp klinken gelijk, die voor de laatste kennen twee vormen.</li>
+</ul>
+
+<h2>De app</h2>
+<p class="text">Roll Over Mozart speelt vier gedrukte dobbelspellen uit de achttiende eeuw. Je eigen worp invoeren kan vanaf versie 1.3, bij het menuet onder Mozarts naam. Voor iPhone en iPad met iOS 26.2 of nieuwer.</p>
+<p class="store"><a href="https://apps.apple.com/app/apple-store/id6793966468?pt=260274&amp;ct=eigen-worp-nl&amp;mt=8">Download in de App Store</a></p>
+<p class="small" style="margin-top:1.5rem">Wil je dit doen met een zaal of een klas en heb je een vraag? Mail naar <a href="mailto:aleatormusichome@gmail.com">aleatormusichome@gmail.com</a>.</p>
+
+<footer>Roll Over Mozart · Anton Pieter van Grootel · Utrecht</footer>
+</div>
+
+</body>
+</html>
