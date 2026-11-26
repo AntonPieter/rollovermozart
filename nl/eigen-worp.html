@@ -94,6 +94,15 @@
 
     a:focus-visible, video:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
 
+    /* The score on an iPad */
+    .tablet { margin: 3rem auto 0; max-width: 30rem; }
+    .tablet img {
+      display: block; width: 100%; height: auto; background: #0A1424;
+      border: 12px solid #0A1424; border-radius: 28px;
+      box-shadow: 0 0 0 1px var(--divider);
+    }
+    .tablet figcaption { text-align: center; }
+
     /* Three settings */
     .ways { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
     .ways li { background: var(--surface); border: 1px solid var(--divider); border-radius: 14px; padding: 1.25rem; }
@@ -164,6 +173,11 @@
     <figcaption>Een echte worp, van dobbelstenen tot partituur. 53 seconden, met geluid.</figcaption>
   </figure>
 </div>
+
+<figure class="tablet">
+  <img src="../img/eigen-worp/ipad-partituur.jpg" width="1400" height="1867" loading="lazy" alt="De partituur van het gegooide menuet in de app op een iPad: het hele stuk staat op een scherm, met de knop Speel af eronder.">
+  <figcaption>Op een iPad staat het hele menuet op één scherm. Zet hem op de piano en speel.</figcaption>
+</figure>
 
 <h2>Drie manieren om het te doen</h2>
 <ul class="ways">
